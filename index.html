@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Como Vai o Tempo</title>
+</head>
+<body>
+    
+    <main class="weather-app">
+        <header>
+            <h1>Como vai o <span>tempo?</span></h1>
+        </header>
+        <form class="get-cep">
+            <input class="put-your-cep" type="text" required="required" name="numbers" pattern="[0-9]+$" placeholder="Digite o CEP da sua Cidade" autofocus/>
+        </form>
+        <section class="current-weather hidden-weather-content">
+             <div class="weather-icon">
+                 <img src="./img/1.png" alt="Poucas Nuvens">
+             </div>
+             <div class="weather-temperature">
+                <p class="current-temperature"></p>
+                <p class="user-city"></p>
+                <small class="current-condition"></small>
+             </div>
+             <div class="weather-datails">
+                <small class="wind">Vento: SSE - 10km/h</small>
+                <small class="humidity">Umidade: 76%</small>
+                <small class="pressure">Pressão: 966.7hPa</small>
+             </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

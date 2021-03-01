@@ -1,0 +1,99 @@
+:root{
+    --primary-color: #00e3ad;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+input:focus{
+    outline: none;
+}
+html, body{
+    height:100vh;
+    font-size: 2vw;
+}
+body{
+    background-color:#242424;
+    font-family: 'PT Sans', sans-serif;
+    color:#fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weather-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.current-weather{
+    display: flex;
+    align-items: center;
+    background-color:#1b1b1b;
+    padding:30px;
+    border-radius:30px;
+    margin-top:30px;
+}
+.hidden-weather-content{
+    display:none;
+}
+.put-your-cep{
+    background:#1b1b1b;
+    color:#f1f1f1;
+    border:none;
+    padding:1.2em;
+    width:40vw;
+    border-radius:30px;
+    font-size: 0.6em;
+}
+.get-cep{
+    position:relative;
+}
+.btn{
+    position:absolute;
+    right:0;
+}
+h1{
+    font-size: 2em;
+    margin-bottom:0.3em;
+}
+small{
+    font-size: 0.65em;
+}
+h1 span{
+    color: var(--primary-color);
+}
+.weather-temperature{
+    text-align: center;
+    margin:0 30px;
+}
+.current-temperature{
+    color: var(--primary-color);
+    font-size: 4em;
+}
+.weather-datails{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+@media (max-width: 600px)
+{
+    body{
+        font-size:22px;
+    }
+    .current-weather{
+        flex-direction: column;
+        min-width: 80vw;
+    }
+    .put-your-cep{
+        min-width:80vw;
+    }
+    .weather-datails{
+        text-align: center;
+        margin-top:30px;
+    }
+
+}
