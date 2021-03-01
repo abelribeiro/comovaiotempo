@@ -37,7 +37,7 @@ function weatherIdRequest(city, uf) {
 }
 
 function currentWeather(cityID) {
-    fetch(`http://apiadvisor.climatempo.com.br/api/v1/weather/locale/${cityID}/current?token=c1cdba8979fd4fb41bf76d03b1d04eb9`)
+    fetch(`https://apiadvisor.climatempo.com.br/api/v1/weather/locale/${cityID}/current?token=c1cdba8979fd4fb41bf76d03b1d04eb9`)
     .then(response => {
         return response.json()
     })
@@ -61,19 +61,3 @@ function currentWeather(cityID) {
 }
 
 
-/*
-
-function myCity() {
-
-    fetch('https://servicodados.ibge.gov.br/api/v1/localidades/distritos')
-    .then(response => {
-        return response.json()
-    })
-    .then (myCityData => {
-        console.log(myCityData[0])
-    })
-}
-
-myCity()
-
-*/
