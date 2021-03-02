@@ -1,5 +1,9 @@
 
-
+let options = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default'
+}
 
 
 
@@ -13,7 +17,7 @@ submitForm.addEventListener('submit', (e) => {
 })
 
 function zipRequest(userCep){
-    fetch(`https://viacep.com.br/ws/${userCep}/json/`)
+    fetch(`https://viacep.com.br/ws/${userCep}/json/`, options)
     .then(response => {
         return response.json()
     })
@@ -26,7 +30,7 @@ function zipRequest(userCep){
     })
 }
 function weatherIdRequest(city, uf) {
-    fetch(`https://apiadvisor.climatempo.com.br/api/v1/locale/city?name=${city}&state=${uf}&token=c1cdba8979fd4fb41bf76d03b1d04eb9`)
+    fetch(`https://apiadvisor.climatempo.com.br/api/v1/locale/city?name=${city}&state=${uf}&token=c1cdba8979fd4fb41bf76d03b1d04eb9`, options)
     .then(response => {
         return response.json()
     })
@@ -37,7 +41,7 @@ function weatherIdRequest(city, uf) {
 }
 
 function currentWeather(cityID) {
-    fetch(`https://apiadvisor.climatempo.com.br/api/v1/weather/locale/${cityID}/current?token=c1cdba8979fd4fb41bf76d03b1d04eb9`)
+    fetch(`https://apiadvisor.climatempo.com.br/api/v1/weather/locale/${cityID}/current?token=c1cdba8979fd4fb41bf76d03b1d04eb9`, options)
     .then(response => {
         return response.json()
     })
